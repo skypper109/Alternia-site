@@ -7,22 +7,6 @@ export const routes: Routes = [
     title: "ALTERNIA — L'Alternative pour apprendre autrement sans oublier notre culture"
   },
   {
-    path: 'education',
-    redirectTo: ''
-  },
-  {
-    path: 'culture',
-    redirectTo: ''
-  },
-  {
-    path: 'avatar',
-    redirectTo: ''
-  },
-  {
-    path: 'contact',
-    redirectTo: ''
-  },
-  {
     path: '**',
     redirectTo: ''
   }

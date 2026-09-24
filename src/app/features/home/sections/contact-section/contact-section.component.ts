@@ -29,8 +29,10 @@ type FormStatus = 'idle' | 'loading' | 'success' | 'error';
       <!-- État : Succès -->
       @if (formStatus() === 'success') {
         <div class="p-6 rounded-2xl bg-white border border-emerald-200 shadow-md text-center space-y-2.5">
-          <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 mx-auto flex items-center justify-center font-bold text-base">
-            ✓
+          <div class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 mx-auto flex items-center justify-center font-bold shadow-xs">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
           </div>
           <h4 class="font-heading text-xl font-bold text-slate-900">Demande envoyée avec succès</h4>
           <p class="text-slate-600 text-xs max-w-md mx-auto">
@@ -168,7 +170,7 @@ type FormStatus = 'idle' | 'loading' | 'success' | 'error';
               ></textarea>
             </div>
 
-            <!-- Bouton -->
+            <!-- Boutons d'envoi -->
             <button
               type="submit"
               [disabled]="formStatus() === 'loading'"
@@ -177,8 +179,26 @@ type FormStatus = 'idle' | 'loading' | 'success' | 'error';
               @if (formStatus() === 'loading') {
                 <span>Envoi en cours...</span>
               } @else {
-                <span>Envoyer ma demande</span>
+                <span>Envoyer ma demande par E-mail</span>
               }
+            </button>
+
+            <div class="relative flex py-1 items-center">
+              <div class="flex-grow border-t border-slate-200"></div>
+              <span class="flex-shrink mx-2 text-[10px] text-slate-400 font-bold uppercase tracking-wider">OU</span>
+              <div class="flex-grow border-t border-slate-200"></div>
+            </div>
+
+            <!-- Bouton WhatsApp Direct -->
+            <button
+              type="button"
+              (click)="sendViaWhatsapp()"
+              class="w-full text-xs sm:text-sm py-2.5 rounded-xl border-2 border-emerald-500 text-emerald-700 bg-emerald-50/50 hover:bg-emerald-100/60 active:scale-[0.99] font-bold flex items-center justify-center gap-2 transition-all shadow-xs"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.274.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.158.572 4.184 1.572 5.939l-1.572 5.733 5.897-1.547c1.705.932 3.659 1.475 5.732 1.475 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z"/>
+              </svg>
+              <span>Transmettre directement sur WhatsApp</span>
             </button>
 
           </form>
@@ -236,6 +256,33 @@ export class ContactSectionComponent {
         this.formStatus.set('error');
       }
     });
+  }
+
+  sendViaWhatsapp(): void {
+    const val = this.contactForm.value;
+    const name = val.nom_prenom?.trim() || '';
+    const profil = val.profil ? `Profil : ${val.profil}` : '';
+    const ville = val.ville ? `Ville : ${val.ville}` : '';
+    const objet = val.objet ? `Objet : ${val.objet}` : '';
+    const msg = val.message ? `Message : ${val.message}` : '';
+
+    const lines = [
+      name ? `Bonjour ALTERNIA, je suis ${name}.` : 'Bonjour ALTERNIA,',
+      profil,
+      ville,
+      objet,
+      msg
+    ].filter(Boolean).join('\n');
+
+    const url = `https://wa.me/22375260610?text=${encodeURIComponent(lines)}`;
+    window.open(url, '_blank');
+  }
+
+  getWhatsappConfirmationLink(): string {
+    const val = this.contactForm.value;
+    const name = val.nom_prenom || '';
+    const text = encodeURIComponent(`Bonjour ALTERNIA, je suis ${name}. Je viens de soumettre une demande via votre site web et souhaite échanger avec vous.`);
+    return `https://wa.me/22375260610?text=${text}`;
   }
 
   resetForm(): void {

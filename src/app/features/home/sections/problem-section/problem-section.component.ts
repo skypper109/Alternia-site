@@ -62,7 +62,7 @@ import { CommonModule } from '@angular/common';
               <!-- Image Compacte & Propre des Parents -->
               <div class="w-full rounded-2xl overflow-hidden border border-slate-200/80 shadow-xs bg-slate-50">
                 <img
-                  src="assets/images/parent1.png"
+                  src="assets/images/parent1.jpg"
                   alt="Accompagnement des parents à la maison avec ALTERNIA"
                   class="w-full h-44 sm:h-52 md:h-56 object-cover object-center rounded-2xl hover:scale-[1.02] transition-transform duration-300"
                   loading="lazy"
@@ -122,7 +122,7 @@ import { CommonModule } from '@angular/common';
               <!-- Image Compacte & Propre des Établissements -->
               <div class="w-full rounded-2xl overflow-hidden border border-slate-200/80 shadow-xs bg-slate-50">
                 <img
-                  src="assets/images/ecole1.png"
+                  src="assets/images/ecole1.jpg"
                   alt="Utilisation d'ALTERNIA dans les établissements scolaires"
                   class="w-full h-44 sm:h-52 md:h-56 object-cover object-center rounded-2xl hover:scale-[1.02] transition-transform duration-300"
                   loading="lazy"
