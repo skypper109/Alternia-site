@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gradBaobab" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F1851F"/>
+      <stop offset="100%" stop-color="#314999"/>
+    </linearGradient>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="150" rx="16" fill="url(#skyGrad)"/>
+  <!-- Moon & Stars -->
+  <circle cx="155" cy="35" r="14" fill="#FEF08A"/>
+  <circle cx="160" cy="32" r="12" fill="url(#skyGrad)"/>
+  <circle cx="45" cy="30" r="1.5" fill="#ffffff" opacity="0.8"/>
+  <circle cx="80" cy="22" r="2" fill="#ffffff" opacity="0.9"/>
+  <circle cx="120" cy="40" r="1.5" fill="#ffffff" opacity="0.7"/>
+  <circle cx="30" cy="60" r="1.5" fill="#ffffff" opacity="0.6"/>
+  <!-- Ground -->
+  <path d="M0 130 Q100 115 200 130 L200 150 L0 150 Z" fill="#334155"/>
+  <!-- Baobab Tree Silhouette -->
+  <path d="M90 130 C90 105 85 90 75 75 C70 65 60 60 50 55 C65 52 75 58 82 65 C85 50 90 40 100 35 C110 40 115 50 118 65 C125 58 135 52 150 55 C140 60 130 65 125 75 C115 90 110 105 110 130 Z" fill="#F1851F" opacity="0.95"/>
+  <path d="M70 60 C80 45 120 45 130 60 C115 52 85 52 70 60 Z" fill="#FDBA74"/>
+  <!-- Open Book / Scroll of Stories at the base -->
+  <path d="M82 125 C92 122 100 125 100 125 C100 125 108 122 118 125 L116 138 C108 135 100 138 100 138 C100 138 92 135 84 138 Z" fill="#40BBCC"/>
+  <!-- Campfire glow -->
+  <circle cx="100" cy="130" r="18" fill="#F59E0B" opacity="0.3" filter="blur(2px)"/>
+</svg>

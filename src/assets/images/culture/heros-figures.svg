@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gradHero" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#314999"/>
+      <stop offset="100%" stop-color="#40BBCC"/>
+    </linearGradient>
+    <linearGradient id="goldHero" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F1851F"/>
+      <stop offset="100%" stop-color="#FDBA74"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="150" rx="16" fill="#F8FAFC"/>
+  <!-- Sun / Aura -->
+  <circle cx="100" cy="70" r="45" fill="url(#goldHero)" opacity="0.25"/>
+  <!-- African Shield -->
+  <path d="M100 25 C125 35 135 65 125 110 C110 125 100 130 100 130 C100 130 90 125 75 110 C65 65 75 35 100 25 Z" fill="url(#gradHero)" stroke="#ffffff" stroke-width="2.5"/>
+  <!-- Shield patterns -->
+  <path d="M100 30 L100 125" stroke="url(#goldHero)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M85 55 L115 55 M80 75 L120 75 M85 95 L115 95" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+  <!-- Crossed Spears -->
+  <line x1="55" y1="120" x2="145" y2="35" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="145,35 140,43 148,42" fill="#F1851F"/>
+  <line x1="145" y1="120" x2="55" y2="35" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="55,35 60,43 52,42" fill="#F1851F"/>
+  <!-- Crown / Star -->
+  <path d="M100 18 L104 26 L112 27 L106 33 L108 41 L100 37 L92 41 L94 33 L88 27 L96 26 Z" fill="url(#goldHero)"/>
+</svg>
