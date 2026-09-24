@@ -1,0 +1,510 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   ALTERNIA — Charte Graphique Officielle
+   ============================================
+   - 60% Blanc #FFFFFF (Domine pour un site épuré)
+   - 25% Bleu Royal #314999 (Titres, CTA principal, structure)
+   - 10% Bleu Cyan #40BBCC (Accents, icônes, éléments interactifs, menu actif)
+   - 5%  Orange Corail #F1851F (CTA secondaire, badges d'attention)
+   - Neutres : Noir doux #1A1A2E, Gris très clair #F8F9FB, Gris moyen #6B7280
+   ============================================ */
+
+:root {
+  --color-primary: #314999;
+  --color-secondary: #40BBCC;
+  --color-accent: #F1851F;
+  --color-white: #ffffff;
+  --color-dark-soft: #1A1A2E;
+  --color-gray-light: #F8F9FB;
+  --color-gray-medium: #6B7280;
+
+  --font-heading: 'Lora', Georgia, Cambria, 'Times New Roman', serif;
+  --font-body: 'Plus Jakarta Sans', 'Instrument Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  background-color: var(--color-white);
+  color: var(--color-dark-soft);
+}
+
+body {
+  background-color: var(--color-white);
+  color: var(--color-dark-soft);
+  font-family: var(--font-body);
+  line-height: 1.68;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* ============================================
+   HEADER & NAVIGATION ACTIVE LUMINEUSE
+   ============================================ */
+
+.header-glass {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(49, 73, 153, 0.08);
+  box-shadow: 0 2px 15px -3px rgba(49, 73, 153, 0.06);
+}
+
+.nav-link {
+  position: relative;
+  transition: all 0.2s ease;
+  font-family: var(--font-body);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 0;
+  height: 2.5px;
+  background: var(--color-secondary);
+  border-radius: 9999px;
+  transform: translateX(-50%);
+  transition: width 0.25s ease, box-shadow 0.25s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-secondary) !important;
+}
+
+.nav-link:hover::after {
+  width: 65%;
+  box-shadow: 0 0 8px rgba(64, 187, 204, 0.8), 0 0 16px rgba(64, 187, 204, 0.4);
+}
+
+.nav-link.active {
+  color: var(--color-secondary) !important;
+}
+
+.nav-link.active::after {
+  width: 80%;
+  box-shadow: 0 0 10px rgba(64, 187, 204, 0.9), 0 0 20px rgba(64, 187, 204, 0.5);
+}
+
+/* ============================================
+   SOULIGNEMENT ARTISTIQUE "ILS NOUS FONT CONFIANCE"
+   ============================================ */
+
+.brush-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.brush-stroke-svg {
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  height: 14px;
+  pointer-events: none;
+  overflow: visible;
+}
+
+/* ============================================
+   BOUTONS OFFICIELS
+   ============================================ */
+
+.btn-primary-official {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 0.875rem 2rem;
+  box-shadow: 0 4px 14px rgba(49, 73, 153, 0.35);
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-primary-official:hover {
+  background-color: #27397a;
+  box-shadow: 0 6px 20px rgba(49, 73, 153, 0.45);
+  transform: translateY(-1px);
+}
+
+.btn-secondary-official {
+  background-color: var(--color-accent);
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 0.875rem 2rem;
+  box-shadow: 0 4px 14px rgba(241, 133, 31, 0.3);
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-secondary-official:hover {
+  background-color: #d87212;
+  box-shadow: 0 6px 20px rgba(241, 133, 31, 0.4);
+  transform: translateY(-1px);
+}
+
+.btn-shimmer-subtle {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shimmer-subtle::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+  animation: shimmerFlow 4s ease-in-out infinite;
+}
+
+@keyframes shimmerFlow {
+  0% { left: -100%; }
+  35% { left: 160%; }
+  100% { left: 160%; }
+}
+
+/* ============================================
+   SECTIONS & DIVIDERS
+   ============================================ */
+
+.section-divider {
+  width: 48px;
+  height: 3px;
+  background: var(--color-secondary);
+  border-radius: 2px;
+  margin: 0.75rem auto 0;
+}
+
+/* Video container */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Marquee */
+.marquee-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-content {
+  display: flex;
+  width: max-content;
+  gap: 1.5rem;
+  animation: scrollTrack 26s linear infinite;
+}
+
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollTrack {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ============================================
+   ANIMATIONS DYNAMIQUES D'ARRIÈRE-PLAN PAR UNIVERS GRAPHIQUE
+   ============================================ */
+
+/* 1. ÉDUCATION : Lignes et courbes fluides continues (Bleu principal) */
+@keyframes ribbonFlow1 {
+  0% {
+    transform: translateX(-4%) translateY(0px) scaleY(1);
+  }
+  50% {
+    transform: translateX(4%) translateY(-14px) scaleY(1.05);
+  }
+  100% {
+    transform: translateX(-4%) translateY(0px) scaleY(1);
+  }
+}
+
+@keyframes ribbonFlow2 {
+  0% {
+    transform: translateX(4%) translateY(0px) scaleY(1);
+  }
+  50% {
+    transform: translateX(-4%) translateY(14px) scaleY(0.95);
+  }
+  100% {
+    transform: translateX(4%) translateY(0px) scaleY(1);
+  }
+}
+
+/* 2. CULTURE : Formes circulaires et anneaux concentriques (Orange) */
+@keyframes circularSpinOrbit {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.04);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes circularPulseOrbit {
+  0%, 100% {
+    transform: scale(0.96) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.04) rotate(90deg);
+  }
+}
+
+/* 3. AVATAR : Lignes discontinues et tracés en pointillés (Bleu clair / Cyan) */
+@keyframes dashedDrift1 {
+  0% {
+    transform: translateX(-3%) translateY(0px);
+    stroke-dashoffset: 0;
+  }
+  50% {
+    transform: translateX(3%) translateY(-10px);
+  }
+  100% {
+    transform: translateX(-3%) translateY(0px);
+    stroke-dashoffset: 120;
+  }
+}
+
+@keyframes dashedDrift2 {
+  0% {
+    transform: translateX(3%) translateY(0px);
+  }
+  50% {
+    transform: translateX(-3%) translateY(10px);
+  }
+  100% {
+    transform: translateX(3%) translateY(0px);
+  }
+}
+
+/* 4. NOTRE SOLUTION : Géométrie moderne & maillage technologique */
+@keyframes spinInPlace {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rayZoomPulse {
+  0%, 100% {
+    transform: scale(0.82) rotate(0deg);
+    opacity: 0.16;
+  }
+  50% {
+    transform: scale(1.18) rotate(25deg);
+    opacity: 0.32;
+  }
+}
+
+@keyframes barrelRoll1 {
+  0% {
+    transform: translateX(-18vw) rotate(0deg) scale(0.92);
+  }
+  50% {
+    transform: translateX(18vw) rotate(360deg) scale(1.08);
+  }
+  100% {
+    transform: translateX(-18vw) rotate(0deg) scale(0.92);
+  }
+}
+
+@keyframes barrelRoll2 {
+  0% {
+    transform: translateX(18vw) rotate(0deg) scale(1.08);
+  }
+  50% {
+    transform: translateX(-18vw) rotate(-360deg) scale(0.92);
+  }
+  100% {
+    transform: translateX(18vw) rotate(0deg) scale(1.08);
+  }
+}
+
+/* Classes utilitaires d'animation */
+.animate-ribbon-1 {
+  animation: ribbonFlow1 22s ease-in-out infinite;
+}
+
+.animate-ribbon-2 {
+  animation: ribbonFlow2 26s ease-in-out infinite;
+}
+
+.animate-circle-spin {
+  animation: circularSpinOrbit 36s linear infinite;
+}
+
+.animate-circle-pulse {
+  animation: circularPulseOrbit 28s ease-in-out infinite;
+}
+
+.animate-ray-zoom {
+  animation: rayZoomPulse 14s ease-in-out infinite;
+}
+
+.animate-spin-in-place {
+  animation: spinInPlace 45s linear infinite;
+}
+
+.animate-dashed-1 {
+  animation: dashedDrift1 20s linear infinite;
+}
+
+.animate-dashed-2 {
+  animation: dashedDrift2 24s ease-in-out infinite;
+}
+
+.animate-barrel-roll-1 {
+  animation: barrelRoll1 16s ease-in-out infinite;
+}
+
+.animate-barrel-roll-2 {
+  animation: barrelRoll2 20s ease-in-out infinite;
+}
+
+/* Trajectoire Pré-Footer : Véritable mouvement SINUSOÏDAL continu GAUCHE → DROITE */
+@keyframes sineWaveMotion {
+  0% {
+    transform: translateX(-40vw) translateY(0px) rotate(-3deg);
+  }
+  12.5% {
+    transform: translateX(-30vw) translateY(-28px) rotate(5deg);
+  }
+  25% {
+    transform: translateX(-20vw) translateY(0px) rotate(-3deg);
+  }
+  37.5% {
+    transform: translateX(-10vw) translateY(28px) rotate(-6deg);
+  }
+  50% {
+    transform: translateX(0vw) translateY(0px) rotate(3deg);
+  }
+  62.5% {
+    transform: translateX(10vw) translateY(-28px) rotate(5deg);
+  }
+  75% {
+    transform: translateX(20vw) translateY(0px) rotate(-3deg);
+  }
+  87.5% {
+    transform: translateX(30vw) translateY(28px) rotate(-6deg);
+  }
+  100% {
+    transform: translateX(40vw) translateY(0px) rotate(3deg);
+  }
+}
+
+@keyframes rollingLogo {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes waveTextFlow {
+  0%, 100% {
+    transform: translateY(0px) skewX(0deg);
+  }
+  25% {
+    transform: translateY(-8px) skewX(-2deg);
+  }
+  50% {
+    transform: translateY(8px) skewX(1deg);
+  }
+  75% {
+    transform: translateY(-6px) skewX(-1.5deg);
+  }
+}
+
+.animate-prefooter-wave {
+  animation: sineWaveMotion 18s ease-in-out infinite alternate;
+}
+
+.animate-rolling-logo {
+  animation: rollingLogo 8s linear infinite;
+}
+
+.animate-wave-text {
+  animation: waveTextFlow 8s ease-in-out infinite;
+}
+
+/* ============================================
+   UTILITAIRES SCROLL REVEAL / SCROLL IN DES CADRES
+   ============================================ */
+
+.entrance-box {
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+
+/* ============================================
+   UTILITAIRES SCROLL REVEAL / SCROLL IN
+   ============================================ */
+
+.reveal-hidden-left {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+
+.reveal-hidden-right {
+  opacity: 0;
+  transform: translateX(40px);
+}
+
+.reveal-hidden-up {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateX(0) translateY(0) scale(1);
+}
+
+

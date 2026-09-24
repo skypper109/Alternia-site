@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gradSkyCity" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="60%" stop-color="#FDBA74"/>
+      <stop offset="100%" stop-color="#F97316"/>
+    </linearGradient>
+    <linearGradient id="gradClay" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C2410C"/>
+      <stop offset="100%" stop-color="#7C2D12"/>
+    </linearGradient>
+    <linearGradient id="gradTower" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#9A3412"/>
+      <stop offset="100%" stop-color="#431407"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="150" rx="16" fill="url(#gradSkyCity)"/>
+  <!-- Glowing Sun over Historic Empire -->
+  <circle cx="100" cy="50" r="30" fill="#FEF08A" opacity="0.6"/>
+  <!-- Djenné / Timbuktu Historic Mud Mosque / Monument Architecture -->
+  <!-- Base Ground -->
+  <path d="M0 120 L200 120 L200 150 L0 150 Z" fill="url(#gradClay)"/>
+  <!-- Central Tower / Minaret -->
+  <path d="M85 120 L88 45 L94 45 L94 38 L100 32 L106 38 L106 45 L112 45 L115 120 Z" fill="url(#gradTower)"/>
+  <!-- Left Wing -->
+  <path d="M35 120 L40 70 L60 70 L65 120 Z" fill="url(#gradClay)"/>
+  <path d="M60 120 L63 55 L85 55 L85 120 Z" fill="url(#gradTower)"/>
+  <!-- Right Wing -->
+  <path d="M115 120 L115 55 L137 55 L140 120 Z" fill="url(#gradTower)"/>
+  <path d="M135 120 L140 70 L160 70 L165 120 Z" fill="url(#gradClay)"/>
+  <!-- Traditional Toron wooden beams protruding -->
+  <line x1="84" y1="60" x2="116" y2="60" stroke="#FEF08A" stroke-width="2" stroke-linecap="round"/>
+  <line x1="86" y1="75" x2="114" y2="75" stroke="#FEF08A" stroke-width="2" stroke-linecap="round"/>
+  <line x1="88" y1="90" x2="112" y2="90" stroke="#FEF08A" stroke-width="2" stroke-linecap="round"/>
+  <line x1="90" y1="105" x2="110" y2="105" stroke="#FEF08A" stroke-width="2" stroke-linecap="round"/>
+  <!-- Ostrich Egg finials on top of towers -->
+  <ellipse cx="100" cy="32" rx="3.5" ry="5" fill="#FFFFFF"/>
+  <ellipse cx="63" cy="55" rx="2.5" ry="4" fill="#FFFFFF"/>
+  <ellipse cx="137" cy="55" rx="2.5" ry="4" fill="#FFFFFF"/>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 48" width="100%" height="100%">
+  <defs>
+    <!-- Wooden peg gradient -->
+    <linearGradient id="woodGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b45309"/>
+      <stop offset="30%" stop-color="#d97706"/>
+      <stop offset="60%" stop-color="#f59e0b"/>
+      <stop offset="85%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#92400e"/>
+    </linearGradient>
+    <!-- Metal spring gradient -->
+    <linearGradient id="springGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#cbd5e1"/>
+      <stop offset="50%" stop-color="#64748b"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <filter id="pegShadow" x="-30%" y="-20%" width="160%" height="150%">
+      <feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#pegShadow)">
+    <!-- Left Wooden Arm -->
+    <path d="M 8,2 C 9,2 11,3 11,5 L 11,18 L 13,22 L 11,26 L 11,44 C 11,46 9,47 8,47 C 7,47 6,45 6,44 L 6,5 C 6,3 7,2 8,2 Z" fill="url(#woodGrad)"/>
+    
+    <!-- Right Wooden Arm -->
+    <path d="M 24,2 C 25,2 26,3 26,5 L 26,44 C 26,45 25,47 24,47 C 23,47 21,46 21,44 L 21,26 L 19,22 L 21,18 L 21,5 C 21,3 23,2 24,2 Z" fill="url(#woodGrad)"/>
+
+    <!-- Central Metal Spring Ring -->
+    <rect x="10" y="19" width="12" height="6" rx="3" fill="url(#springGrad)"/>
+    <circle cx="16" cy="22" r="2" fill="#0f172a"/>
+  </g>
+</svg>
