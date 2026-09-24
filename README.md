@@ -96,3 +96,4 @@ Puis mettre à jour les chemins dans `contact.component.ts`.
 ---
 
 © 2026 ALTERNIA — Tous droits réservés
+# Alternia-site
