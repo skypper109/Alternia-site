@@ -168,30 +168,30 @@ export class FaqSectionComponent {
     {
       id: 'faq-1',
       category: 'technique',
-      badge: 'Hors-ligne',
-      question: 'Le boîtier fonctionne-t-il vraiment sans connexion Internet ?',
-      answer: 'Oui, à 100%. Le boîtier ALTA intègre sa propre mémoire et son modèle d\'intelligence artificielle embarqué. Il n\'a besoin ni de Wi-Fi, ni de forfait data 4G pour répondre aux questions scolaires, faire réviser les leçons ou raconter les contes. Cela garantit une équité totale même dans les zones sans réseau.'
+      badge: 'Hors-ligne & Edge AI',
+      question: 'Comment le boîtier fonctionne-t-il sans Internet et quelle IA tourne dedans ?',
+      answer: 'Le boîtier AlternIA embarque un modèle de langage (LLM) de pointe Qwen 2.5 3B quantifié en GGUF et optimisé pour l\'inférence locale sur processeur basse consommation. Il ne nécessite ni forfait data 4G, ni box Internet : il émet son propre point d\'accès Wi-Fi local auquel les téléphones et tablettes se connectent directement pour dialoguer avec le tuteur vocal.'
     },
     {
       id: 'faq-2',
       category: 'pedagogie',
-      badge: 'DEF & Bac',
-      question: 'Comment les contenus sont-ils conformes au programme scolaire malien ?',
-      answer: 'Toutes les banques de connaissances, méthodologies et exercices d\'ALTERNIA sont élaborés et vérifiés en stricte conformité avec le curriculum national officiel en vigueur au Mali (Fondamental 1, Fondamental 2 pour la préparation du DEF, et Lycée pour le Baccalauréat). Rien de hors programme n\'est injecté.'
+      badge: 'DEF & Séries Bac',
+      question: 'Quelles classes et séries du programme scolaire malien sont couvertes ?',
+      answer: 'AlternIA couvre tout le secondaire malien : la 10ème Année (Tronc Commun CG & CT), les 4 séries de 11ème (11ème Sciences SC, 11ème Lettres LL, 11ème Économie SECO, 11ème STI) et l\'ensemble des filières du Baccalauréat en 12ème Terminale (TSE, TSExp, TSS, TSEco, TLL). Le cycle fondamental pour la préparation intensive du DEF est également inclus.'
     },
     {
       id: 'faq-3',
       category: 'technique',
       badge: 'Batterie & Délestages',
-      question: 'Quelle est l\'autonomie du boîtier en cas de coupure de courant ?',
-      answer: 'Le boîtier ALTA est équipé d\'une batterie lithium haute performance offrant entre 8 et 12 heures d\'utilisation continue. Il peut être rechargé via une prise secteur standard ou par un panneau solaire / batterie externe 5V USB-C.'
+      question: 'Quelle est l\'autonomie du boîtier en cas de coupure d\'électricité ?',
+      answer: 'Le boîtier AlternIA Box intègre une batterie lithium haute capacité garantissant entre 8 et 12 heures d\'autonomie continue. Il est spécialement calibré pour surmonter les délestages électriques fréquents et peut se recharger sur secteur, prise allume-cigare ou panneau solaire standard en USB-C.'
     },
     {
       id: 'faq-4',
       category: 'pedagogie',
       badge: 'Avatars & Voix',
-      question: 'Comment fonctionne la personnalisation de la voix et de l\'avatar (Version Premium) ?',
-      answer: 'Grâce à notre application sécurisée, le parent ou l\'enseignant enregistre simplement 2 à 3 minutes de lecture vocale pour créer son empreinte sonore. L\'assistant peut alors répondre à l\'enfant avec la voix rassurante de son père, de sa mère ou de son maître d\'école, renforçant la confiance et la concentration.'
+      question: 'Comment fonctionnent le tuteur vocal socratique et les avatars ?',
+      answer: 'Le moteur pédagogique applique une méthode socratique active : il ne donne jamais la solution toute faite mais guide l\'élève étape par étape. Grâce au studio vocal et aux avatars (enseignant, parent, grand-père conteur), l\'élève interagit à la voix avec des intonations chaleureuses et adaptées aux expressions culturelles locales.'
     },
     {
       id: 'faq-5',
@@ -202,17 +202,17 @@ export class FaqSectionComponent {
     },
     {
       id: 'faq-6',
-      category: 'general',
+      category: 'technique',
       badge: 'Multi-Élèves',
-      question: 'Un seul boîtier peut-il servir à plusieurs enfants dans une même famille ?',
-      answer: 'Absolument. Le boîtier gère des profils d\'apprentissage distincts. L\'aîné en 9ème année peut réviser son DEF de mathématiques l\'après-midi, et son jeune frère en 6ème peut écouter des contes ou revoir sa conjugaison le soir.'
+      question: 'Un seul boîtier peut-il servir à plusieurs élèves simultanément ?',
+      answer: 'Oui. Le boîtier AlternIA supporte la connexion simultanée de plusieurs smartphones ou tablettes en classe ou au sein du foyer familial. Chaque élève conserve son profil d\'apprentissage distinct avec son historique, son niveau de maîtrise par matière et ses statistiques de progression.'
     },
     {
       id: 'faq-7',
-      category: 'achat',
-      badge: 'Écoles Partenaires',
-      question: 'Proposez-vous des déploiements pilotes pour les écoles privées et publiques ?',
-      answer: 'Oui ! Nous accompagnons déjà plusieurs établissements partenaires (comme le Lycée Rosé Abantara ou le Complexe Scolaire CSM Adiara). Nous installons des boîtiers en classe avec formation des enseignants et fournissons un tableau de bord de suivi des progrès.'
+      category: 'pedagogie',
+      badge: 'Portail Alta & Écoles',
+      question: 'Existe-t-il un portail de suivi pour les directeurs d\'écoles et les parents ?',
+      answer: 'Oui, la plateforme web Alta (disponible en accompagnement du dispositif) offre aux chefs d\'établissement et aux parents une vue d\'ensemble en temps réel : supervision de la flotte de boîtiers (batterie, stockage), cartographie des points de blocage par matière, et génération automatisée de fiches de révision et de quiz d\'évaluation.'
     }
   ];
 

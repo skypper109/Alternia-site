@@ -17,6 +17,18 @@ interface PromptPreset {
 
 const ALL_PRESETS: PromptPreset[] = [
   {
+    id: 'maths-second-degre',
+    category: 'scolaire',
+    label: 'Équation du 2nd Degré',
+    badge: 'Terminale TSE & TSExp',
+    iconType: 'maths',
+    level: '12ème Année • Terminale Sciences Exactes (Baccalauréat)',
+    avatarName: 'Assistant Pédagogique ALTA',
+    avatarRole: 'Moteur Socratique • Mathématiques Spécialisées',
+    question: 'Comment résoudre l\'équation 2x² - 5x + 2 = 0 ?',
+    response: `Appliquons la méthode étape par étape avec le discriminant delta :\n\n1. Coefficients : a = 2, b = -5, c = 2\n2. Calcul du discriminant :\n   Δ = b² - 4ac = (-5)² - 4(2)(2) = 25 - 16 = 9\n\n3. Analyse : Puisque Δ > 0 (strictement positif), l'équation admet deux solutions réelles distinctes :\n   • x₁ = (-b - √Δ) / 2a = (5 - 3) / 4 = 2/4 = 1/2\n   • x₂ = (-b + √Δ) / 2a = (5 + 3) / 4 = 8/4 = 2\n\nConclusion : L'ensemble des solutions est S = {1/2 ; 2}.\nVeux-tu qu'on s'entraîne sur un cas avec Δ < 0 ou Δ = 0 ?`
+  },
+  {
     id: 'maths-pythagore',
     category: 'scolaire',
     label: 'Théorème de Pythagore',

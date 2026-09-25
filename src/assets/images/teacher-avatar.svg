@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="tBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#314999"/>
+      <stop offset="60%" stop-color="#1b2a59"/>
+      <stop offset="100%" stop-color="#0c1328"/>
+    </linearGradient>
+    <linearGradient id="tSkinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7a4b24"/>
+      <stop offset="100%" stop-color="#543216"/>
+    </linearGradient>
+    <linearGradient id="tSuitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#40BBCC"/>
+      <stop offset="100%" stop-color="#247883"/>
+    </linearGradient>
+    <linearGradient id="tShirtGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Circle with Cyan Glow -->
+  <circle cx="200" cy="200" r="190" fill="url(#tBgGrad)" stroke="#40BBCC" stroke-width="4" stroke-opacity="0.5"/>
+  <circle cx="200" cy="200" r="175" fill="none" stroke="#40BBCC" stroke-width="1.5" stroke-dasharray="6,6" stroke-opacity="0.7"/>
+
+  <!-- Teacher Jacket & Shirt -->
+  <path d="M80 400 C100 290, 140 265, 200 265 C260 265, 300 290, 320 400 Z" fill="#1e293b"/>
+  <!-- Lapel / V-Neck Jacket -->
+  <path d="M130 400 L170 300 L200 360 L230 300 L270 400 Z" fill="url(#tSuitGrad)"/>
+  <!-- White Collar Shirt -->
+  <path d="M175 275 L200 330 L225 275 Z" fill="url(#tShirtGrad)"/>
+  <!-- Modern Orange Tie / Detail -->
+  <path d="M195 285 L205 285 L208 360 L200 375 L192 360 Z" fill="#F1851F"/>
+
+  <!-- Neck -->
+  <rect x="175" y="210" width="50" height="70" rx="10" fill="url(#tSkinGrad)"/>
+
+  <!-- Head -->
+  <ellipse cx="200" cy="180" rx="62" ry="72" fill="url(#tSkinGrad)"/>
+
+  <!-- Short Modern Haircut -->
+  <path d="M138 175 C136 125, 264 125, 262 175 C255 135, 145 135, 138 175 Z" fill="#18110a"/>
+  <ellipse cx="200" cy="140" rx="63" ry="25" fill="#18110a"/>
+
+  <!-- Ears -->
+  <ellipse cx="134" cy="185" rx="10" ry="15" fill="url(#tSkinGrad)"/>
+  <ellipse cx="266" cy="185" rx="10" ry="15" fill="url(#tSkinGrad)"/>
+
+  <!-- Eyebrows -->
+  <path d="M162 158 Q178 150 192 156" stroke="#18110a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <path d="M208 156 Q222 150 238 158" stroke="#18110a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Eyes -->
+  <ellipse cx="177" cy="170" rx="6.5" ry="4.5" fill="#ffffff"/>
+  <ellipse cx="223" cy="170" rx="6.5" ry="4.5" fill="#ffffff"/>
+  <circle cx="177" cy="170" r="3.2" fill="#1e130c"/>
+  <circle cx="223" cy="170" r="3.2" fill="#1e130c"/>
+
+  <!-- Smart Stylish Glasses (Teacher hallmark) -->
+  <rect x="156" y="158" width="38" height="24" rx="7" fill="none" stroke="#40BBCC" stroke-width="3"/>
+  <rect x="206" y="158" width="38" height="24" rx="7" fill="none" stroke="#40BBCC" stroke-width="3"/>
+  <line x1="194" y1="170" x2="206" y2="170" stroke="#40BBCC" stroke-width="3"/>
+  <line x1="156" y1="168" x2="136" y2="175" stroke="#40BBCC" stroke-width="2.5"/>
+  <line x1="244" y1="168" x2="264" y2="175" stroke="#40BBCC" stroke-width="2.5"/>
+
+  <!-- Nose -->
+  <path d="M196 178 Q200 194 204 178" stroke="#42250d" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M192 194 Q200 198 208 194" stroke="#42250d" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Encouraging Smile -->
+  <path d="M182 212 Q200 226 218 212" stroke="#2d1706" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M186 213 Q200 221 214 213" fill="#ffffff" opacity="0.9"/>
+</svg>

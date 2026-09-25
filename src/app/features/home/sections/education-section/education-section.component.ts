@@ -229,28 +229,20 @@ import { CommonModule } from '@angular/common';
                   </div>
 
                   <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700">
-                    <li class="flex items-center gap-2.5">
-                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center flex-shrink-0">
-                        <svg class="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                      </span>
+                    <li class="flex items-center gap-2">
+                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center text-[10px] font-bold flex-shrink-0">✓</span>
                       <span>Interaction vocale</span>
                     </li>
-                    <li class="flex items-center gap-2.5">
-                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center flex-shrink-0">
-                        <svg class="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                      </span>
+                    <li class="flex items-center gap-2">
+                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center text-[10px] font-bold flex-shrink-0">✓</span>
                       <span>Projection sur écran externe</span>
                     </li>
-                    <li class="flex items-center gap-2.5">
-                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center flex-shrink-0">
-                        <svg class="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                      </span>
+                    <li class="flex items-center gap-2">
+                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center text-[10px] font-bold flex-shrink-0">✓</span>
                       <span>Utilisation par plusieurs élèves</span>
                     </li>
-                    <li class="flex items-center gap-2.5">
-                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center flex-shrink-0">
-                        <svg class="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                      </span>
+                    <li class="flex items-center gap-2">
+                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center text-[10px] font-bold flex-shrink-0">✓</span>
                       <span>Accès aux fonctionnalités importantes sans connexion</span>
                     </li>
                   </ul>
@@ -349,40 +341,28 @@ import { CommonModule } from '@angular/common';
                   </div>
 
                   <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700">
-                    <li class="flex items-center gap-2.5">
-                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center flex-shrink-0">
-                        <svg class="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                      </span>
+                    <li class="flex items-center gap-2">
+                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center text-[10px] font-bold flex-shrink-0">✓</span>
                       <span>Clonage / personnalisation de voix</span>
                     </li>
-                    <li class="flex items-center gap-2.5">
-                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center flex-shrink-0">
-                        <svg class="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                      </span>
+                    <li class="flex items-center gap-2">
+                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center text-[10px] font-bold flex-shrink-0">✓</span>
                       <span>Avatar de l’enseignant</span>
                     </li>
-                    <li class="flex items-center gap-2.5">
-                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center flex-shrink-0">
-                        <svg class="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                      </span>
+                    <li class="flex items-center gap-2">
+                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center text-[10px] font-bold flex-shrink-0">✓</span>
                       <span>Avatar du parent</span>
                     </li>
-                    <li class="flex items-center gap-2.5">
-                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center flex-shrink-0">
-                        <svg class="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                      </span>
+                    <li class="flex items-center gap-2">
+                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center text-[10px] font-bold flex-shrink-0">✓</span>
                       <span>Affichage de l’avatar sur l’écran</span>
                     </li>
-                    <li class="flex items-center gap-2.5">
-                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center flex-shrink-0">
-                        <svg class="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                      </span>
+                    <li class="flex items-center gap-2">
+                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center text-[10px] font-bold flex-shrink-0">✓</span>
                       <span>Interaction vocale personnalisée</span>
                     </li>
-                    <li class="flex items-center gap-2.5">
-                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center flex-shrink-0">
-                        <svg class="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                      </span>
+                    <li class="flex items-center gap-2">
+                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center text-[10px] font-bold flex-shrink-0">✓</span>
                       <span>Suivi à distance et recommandation</span>
                     </li>
                   </ul>
@@ -467,7 +447,7 @@ export class EducationSectionComponent implements AfterViewInit, OnDestroy {
   @ViewChild('demoVideo') videoRef?: ElementRef<HTMLVideoElement>;
   @ViewChild('mockupSection') mockupRef?: ElementRef<HTMLElement>;
   @ViewChild('videoSection') videoSectionRef?: ElementRef<HTMLElement>;
-  
+
   @ViewChildren('keyCard') keyCardRefs!: QueryList<ElementRef<HTMLElement>>;
   @ViewChildren('offerCard') offerCardRefs!: QueryList<ElementRef<HTMLElement>>;
 
@@ -499,7 +479,7 @@ export class EducationSectionComponent implements AfterViewInit, OnDestroy {
             if (entry.isIntersecting) {
               videoEl.play().catch(() => {
                 videoEl.muted = true;
-                videoEl.play().catch(() => {});
+                videoEl.play().catch(() => { });
               });
             } else {
               videoEl.pause();
