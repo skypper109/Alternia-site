@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChildren, QueryList, AfterViewInit, OnDestroy, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 interface StepItem {
@@ -14,15 +14,15 @@ interface StepItem {
   standalone: true,
   imports: [CommonModule],
   template: `
-    <section class="py-10 sm:py-14 lg:py-18 bg-white relative border-t border-slate-200/70 overflow-hidden">
+    <section class="py-12 sm:py-16 lg:py-20 bg-white relative border-t border-slate-200/70">
       
       <!-- ========================================================
-           MOTIFS D'ARRIÈRE-PLAN : NOTRE SOLUTION (POSITIONNÉS EN DESSOUS DES TITRES & AU NIVEAU DES CARTES)
+           MOTIFS D'ARRIÈRE-PLAN : NOTRE SOLUTION
            ======================================================== -->
       <div class="absolute inset-0 pointer-events-none overflow-hidden z-0" aria-hidden="true">
         
-        <!-- Polygone Géométrique Médian : Positionné sous l'en-tête & au niveau des cartes (Gris) -->
-        <div class="absolute top-[44%] -left-16 sm:-left-6 lg:left-4 w-[380px] sm:w-[460px] h-[320px] sm:h-[380px] text-slate-400 opacity-20 animate-spin-in-place">
+        <!-- Polygone Géométrique Médian (Gris) -->
+        <div class="absolute top-[35%] -left-16 sm:-left-6 lg:left-4 w-[380px] sm:w-[460px] h-[320px] sm:h-[380px] text-slate-400 opacity-20 animate-spin-in-place">
           <svg viewBox="0 0 600 500" fill="none" stroke="currentColor" stroke-width="2" class="w-full h-full">
             <polygon points="120,40 380,20 540,180 440,380 200,420 60,260" stroke-width="2.2"/>
             <polygon points="220,120 420,100 480,240 360,340 180,300" stroke-width="1.6"/>
@@ -41,7 +41,7 @@ interface StepItem {
           </svg>
         </div>
 
-        <!-- Polygones & Maillage Géométrique Inférieur en Roulement de Tonneau Inverse (Gris) -->
+        <!-- Polygones & Maillage Géométrique Inférieur (Gris) -->
         <div class="absolute -bottom-16 right-1/4 w-[480px] sm:w-[620px] h-[380px] sm:h-[480px] text-slate-400 opacity-20 animate-barrel-roll-2">
           <svg viewBox="0 0 600 500" fill="none" stroke="currentColor" stroke-width="2" class="w-full h-full">
             <polygon points="180,60 440,40 560,240 400,440 140,400 40,200" stroke-width="2.2"/>
@@ -66,7 +66,7 @@ interface StepItem {
       <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
         
         <!-- En-tête avec titre centré harmonisé en 2 lignes et taille responsive -->
-        <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12 space-y-1.5 px-2 sm:px-0">
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14 space-y-1.5 px-2 sm:px-0">
           <span class="inline-block text-primary text-[10px] sm:text-xs font-bold uppercase tracking-widest px-3 py-0.5 sm:px-3.5 sm:py-1 bg-primary/10 rounded-full border border-primary/20">
             Notre Solution
           </span>
@@ -80,48 +80,46 @@ interface StepItem {
         </div>
 
         <!-- ========================================================
-             LES 5 MÉTHODES EN CARTES EMPILÉES AU SCROLL (STACKING DECK)
+             LES 5 CARTES EN EMPILEMENT ET DÉPLIEMENT SUCCESSIF AU SCROLL
+             (Espacement resserré & superposition complète des 5 cartes)
              ======================================================== -->
-        <div class="max-w-3xl mx-auto relative px-2 sm:px-4 pb-12 sm:pb-20">
+        <div class="max-w-3xl mx-auto relative px-2 sm:px-4">
           
-          <div class="relative space-y-5 sm:space-y-6">
+          <!-- Conteneur avec marge d'ancrage inférieure (pb-36 sm:pb-52) pour garantir le verrouillage de la 5ème carte -->
+          <div class="relative pb-36 sm:pb-52">
             @for (step of steps; track step.title; let i = $index) {
+              <!-- Carte Sticky avec Espacement Rapproché (mb-12 sm:mb-16) -->
               <div
-                #stepCard
-                class="sticky transition-all duration-[1200ms] ease-out origin-top"
-                [style.top]="(80 + i * 12) + 'px'"
+                class="sticky transition-all duration-300 ease-out origin-top mb-12 sm:mb-16 last:mb-0"
+                [style.top]="(92 + i * 10) + 'px'"
                 [style.zIndex]="i + 10"
-                [ngClass]="{
-                  'opacity-0 translate-y-10 scale-95': !isCardInView(i),
-                  'opacity-100 translate-y-0 scale-100': isCardInView(i)
-                }"
               >
-                <!-- Card Empilable Compacte 100% Blanche et Opaque avec Icône & Textes -->
+                <!-- Card Opaque 100% Blanche avec Élévation Deck & Superposition Nette -->
                 <div
-                  class="bg-white rounded-2xl py-3 px-4 sm:py-3.5 sm:px-5 border border-slate-200/90 shadow-[0_-3px_15px_rgba(0,0,0,0.04),0_10px_28px_rgba(49,73,153,0.08)] hover:shadow-[0_-4px_20px_rgba(0,0,0,0.06),0_14px_34px_rgba(49,73,153,0.12)] transition-all duration-300 relative overflow-hidden"
+                  class="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-5 md:p-6 border-2 border-slate-200/90 shadow-[0_-8px_30px_rgba(0,0,0,0.06),0_18px_40px_rgba(49,73,153,0.11)] hover:shadow-[0_-10px_35px_rgba(0,0,0,0.08),0_22px_45px_rgba(49,73,153,0.15)] transition-all duration-300 relative overflow-hidden"
                 >
-                  <div class="flex items-center gap-3 sm:gap-4">
+                  <div class="flex items-center gap-4 sm:gap-5">
                     
-                    <!-- Icône Contextuelle Compacte -->
+                    <!-- Icône Contextuelle avec son fond coloré -->
                     <div
-                      class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center flex-shrink-0 shadow-xs"
+                      class="w-11 h-11 sm:w-13 sm:h-13 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-xs"
                       [ngClass]="{
                         'bg-primary/10 text-primary': step.color === 'primary',
                         'bg-secondary/15 text-secondary': step.color === 'secondary',
                         'bg-accent/15 text-accent': step.color === 'accent'
                       }"
                     >
-                      <svg class="w-4 h-4 sm:w-5 sm:h-5 fill-none stroke-current stroke-2" viewBox="0 0 24 24" aria-hidden="true">
+                      <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-none stroke-current stroke-2" viewBox="0 0 24 24" aria-hidden="true">
                         <path [attr.d]="step.iconSvg" />
                       </svg>
                     </div>
 
-                    <!-- Titre et Description Harmonieux -->
-                    <div class="space-y-0.5 min-w-0 flex-1">
-                      <h3 class="font-heading font-bold text-slate-900 text-sm sm:text-base">
+                    <!-- Titre et Description (Sans numéro) -->
+                    <div class="space-y-1 min-w-0 flex-1">
+                      <h3 class="font-heading font-bold text-slate-900 text-sm sm:text-base md:text-lg">
                         {{ step.title }}
                       </h3>
-                      <p class="text-slate-600 text-xs leading-relaxed">
+                      <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
                         {{ step.desc }}
                       </p>
                     </div>
@@ -139,16 +137,7 @@ interface StepItem {
     </section>
   `
 })
-export class SolutionSectionComponent implements AfterViewInit, OnDestroy {
-  @ViewChildren('stepCard') stepCardRefs!: QueryList<ElementRef<HTMLElement>>;
-  
-  readonly cardsInView = signal<boolean[]>([false, false, false, false, false]);
-  private observer?: IntersectionObserver;
-
-  isCardInView(index: number): boolean {
-    return this.cardsInView()[index] ?? false;
-  }
-
+export class SolutionSectionComponent {
   readonly steps: StepItem[] = [
     {
       number: '01',
@@ -186,36 +175,4 @@ export class SolutionSectionComponent implements AfterViewInit, OnDestroy {
       iconSvg: 'M13 10V3L4 14h7v7l9-11h-7z'
     }
   ];
-
-  ngAfterViewInit(): void {
-    if (typeof window === 'undefined') return;
-
-    this.observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const cardIndex = this.stepCardRefs.toArray().findIndex(
-            (ref) => ref.nativeElement === entry.target
-          );
-          if (cardIndex !== -1) {
-            this.cardsInView.update((states) => {
-              const next = [...states];
-              next[cardIndex] = entry.isIntersecting;
-              return next;
-            });
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
-
-    this.stepCardRefs.forEach((ref) => {
-      this.observer?.observe(ref.nativeElement);
-    });
-  }
-
-  ngOnDestroy(): void {
-    if (this.observer) {
-      this.observer.disconnect();
-    }
-  }
 }
