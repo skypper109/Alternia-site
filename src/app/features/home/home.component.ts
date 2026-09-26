@@ -7,8 +7,12 @@ import { ProblemSectionComponent } from './sections/problem-section/problem-sect
 import { SolutionSectionComponent } from './sections/solution-section/solution-section.component';
 import { PartnersSectionComponent } from './sections/partners-section/partners-section.component';
 import { EducationSectionComponent } from './sections/education-section/education-section.component';
+import { SavingsCalculatorComponent } from './sections/savings-calculator/savings-calculator.component';
+import { AiSimulatorComponent } from './sections/ai-simulator/ai-simulator.component';
 import { CultureSectionComponent } from './sections/culture-section/culture-section.component';
+import { CultureAudioComponent } from './sections/culture-audio/culture-audio.component';
 import { AvatarSectionComponent } from './sections/avatar-section/avatar-section.component';
+import { FaqSectionComponent } from './sections/faq-section/faq-section.component';
 import { TeamSectionComponent } from './sections/team-section/team-section.component';
 import { ContactSectionComponent } from './sections/contact-section/contact-section.component';
 import { FloatingWhatsappComponent } from '../../shared/components/floating-whatsapp/floating-whatsapp.component';
@@ -23,32 +27,45 @@ import { FloatingWhatsappComponent } from '../../shared/components/floating-what
     SolutionSectionComponent,
     PartnersSectionComponent,
     EducationSectionComponent,
+    SavingsCalculatorComponent,
+    AiSimulatorComponent,
     CultureSectionComponent,
+    CultureAudioComponent,
     AvatarSectionComponent,
+    FaqSectionComponent,
     TeamSectionComponent,
     ContactSectionComponent,
     FloatingWhatsappComponent
   ],
   template: `
-    <!-- 1. ACCUEIL — HERO CENTRÉ EN 3 LIGNES SANS TAGS SUPERFLUS -->
+    <!-- 1. ACCUEIL — HERO CENTRÉ -->
     <app-hero-section />
 
-    <!-- 2. ACCUEIL — VALEUR AJOUTÉE & CADRES PARENTS / ÉCOLES -->
+    <!-- 2. ORIGINE DU PROJET — VALEUR AJOUTÉE PARENTS / ÉCOLES -->
     <app-problem-section />
 
-    <!-- 3. ACCUEIL — SOLUTION AVEC ROADMAP VISUELLE 8 ÉTAPES EN ZIGZAG -->
+    <!-- 3. NOTRE SOLUTION — 5 MÉTHODES CLÉS -->
     <app-solution-section />
 
-    <!-- 4. ACCUEIL — ILS NOUS FONT CONFIANCE -->
+    <!-- 4. PARTENAIRES — ILS NOUS FONT CONFIANCE -->
     <app-partners-section />
 
-    <!-- 5. ÉDUCATION — PROGRAMME MALIEN, BOÎTIER & DÉMONSTRATION VIDÉO -->
+    <!-- 5. ÉDUCATION — BOÎTIER ALTA, OFFRES & VIDÉO -->
     <app-education-section />
 
-    <!-- 6. CULTURE — GRAND-PÈRE CONTEUR & 4 PILIERS SUR LIGNE POINTILLÉE -->
+    <!-- 6. CALCULATEUR D'ÉCONOMIES POUR LES PARENTS -->
+    <app-savings-calculator />
+
+    <!-- 7. SIMULATEUR D'IA EN DIRECT (TESTS SCOLAIRES & CULTURELS) -->
+    <app-ai-simulator />
+
+    <!-- 8. CULTURE — GRAND-PÈRE CONTEUR & 4 PILIERS -->
     <app-culture-section />
 
-    <!-- 7. AVATAR — LES 3 AVATARS PERSONNALISÉS -->
+    <!-- 9. IMMERSION AUDIO & PROVERBES BAMANANKAN -->
+    <app-culture-audio />
+
+    <!-- 10. AVATAR — LES 3 AVATARS PERSONNALISÉS -->
     <app-avatar-section />
 
     <!-- 8. ÉQUIPE -->

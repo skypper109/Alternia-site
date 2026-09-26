@@ -4,6 +4,7 @@ import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { CookieBannerComponent } from './cookie-banner/cookie-banner.component';
 import { PwaInstallBannerComponent } from './pwa/pwa-install-banner.component';
+import { LegalModalComponent } from './shared/components/legal-modal/legal-modal.component';
 import { PwaInstallService } from './core/services/pwa-install.service';
 
 @Component({
@@ -14,7 +15,8 @@ import { PwaInstallService } from './core/services/pwa-install.service';
     HeaderComponent,
     FooterComponent,
     CookieBannerComponent,
-    PwaInstallBannerComponent
+    PwaInstallBannerComponent,
+    LegalModalComponent
   ],
   template: `
     <app-header />
@@ -24,6 +26,7 @@ import { PwaInstallService } from './core/services/pwa-install.service';
     <app-footer />
     <app-cookie-banner />
     <app-pwa-install-banner />
+    <app-legal-modal />
   `
 })
 export class AppComponent implements OnInit {

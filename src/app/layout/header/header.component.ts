@@ -177,8 +177,9 @@ export class HeaderComponent implements OnInit {
   readonly mainNavItems: NavItem[] = [
     { label: 'Accueil', targetId: 'accueil' },
     { label: 'Éducation', targetId: 'education' },
+    { label: 'Démo IA', targetId: 'demo-ia' },
     { label: 'Culture', targetId: 'culture' },
-    { label: 'Avatar', targetId: 'avatar' }
+    { label: 'FAQ', targetId: 'faq' }
   ];
 
   readonly allNavItems: NavItem[] = [
@@ -197,7 +198,7 @@ export class HeaderComponent implements OnInit {
   }
 
   private detectActiveSection(): void {
-    const sections = ['accueil', 'education', 'culture', 'avatar', 'contact'];
+    const sections = ['accueil', 'education', 'demo-ia', 'culture', 'faq', 'contact'];
     const scrollPosition = window.scrollY + 140;
 
     for (let i = sections.length - 1; i >= 0; i--) {

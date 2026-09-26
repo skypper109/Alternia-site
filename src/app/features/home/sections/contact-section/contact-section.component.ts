@@ -444,6 +444,33 @@ export class ContactSectionComponent {
     });
   }
 
+  sendViaWhatsapp(): void {
+    const val = this.contactForm.value;
+    const name = val.nom_prenom?.trim() || '';
+    const profil = val.profil ? `Profil : ${val.profil}` : '';
+    const ville = val.ville ? `Ville : ${val.ville}` : '';
+    const objet = val.objet ? `Objet : ${val.objet}` : '';
+    const msg = val.message ? `Message : ${val.message}` : '';
+
+    const lines = [
+      name ? `Bonjour ALTERNIA, je suis ${name}.` : 'Bonjour ALTERNIA,',
+      profil,
+      ville,
+      objet,
+      msg
+    ].filter(Boolean).join('\n');
+
+    const url = `https://wa.me/22375260610?text=${encodeURIComponent(lines)}`;
+    window.open(url, '_blank');
+  }
+
+  getWhatsappConfirmationLink(): string {
+    const val = this.contactForm.value;
+    const name = val.nom_prenom || '';
+    const text = encodeURIComponent(`Bonjour ALTERNIA, je suis ${name}. Je viens de soumettre une demande via votre site web et souhaite échanger avec vous.`);
+    return `https://wa.me/22375260610?text=${text}`;
+  }
+
   resetForm(): void {
     this.contactForm.reset();
     this.formStatus.set('idle');

@@ -101,7 +101,7 @@ interface CulturalPillar {
                 <div class="absolute -inset-1.5 bg-gradient-to-tr from-accent to-secondary rounded-[1.75rem] opacity-35 transform -rotate-1"></div>
                 <div class="relative rounded-[1.5rem] overflow-hidden border-4 border-white shadow-lg bg-slate-100 aspect-[16/10] sm:aspect-[16/9] max-h-72 flex items-center justify-center">
                   <img
-                    src="assets/images/vieux.png"
+                    src="assets/images/vieux.jpg"
                     alt="Le Grand-Père Conteur et les auditeurs sous l'arbre"
                     class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500"
                     loading="lazy"

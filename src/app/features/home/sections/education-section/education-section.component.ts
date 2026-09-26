@@ -173,7 +173,7 @@ import { CommonModule } from '@angular/common';
             }"
           >
             <img
-              src="assets/images/app-education-mockup.png"
+              src="assets/images/app-education-mockup.jpg"
               alt="Interface de l'application mobile et tablette ALTERNIA Éducation"
               class="w-full h-auto object-cover"
               loading="lazy"
@@ -229,20 +229,28 @@ import { CommonModule } from '@angular/common';
                   </div>
 
                   <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700">
-                    <li class="flex items-center gap-2">
-                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center text-[10px] font-bold flex-shrink-0">✓</span>
+                    <li class="flex items-center gap-2.5">
+                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center flex-shrink-0">
+                        <svg class="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                      </span>
                       <span>Interaction vocale</span>
                     </li>
-                    <li class="flex items-center gap-2">
-                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center text-[10px] font-bold flex-shrink-0">✓</span>
+                    <li class="flex items-center gap-2.5">
+                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center flex-shrink-0">
+                        <svg class="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                      </span>
                       <span>Projection sur écran externe</span>
                     </li>
-                    <li class="flex items-center gap-2">
-                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center text-[10px] font-bold flex-shrink-0">✓</span>
+                    <li class="flex items-center gap-2.5">
+                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center flex-shrink-0">
+                        <svg class="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                      </span>
                       <span>Utilisation par plusieurs élèves</span>
                     </li>
-                    <li class="flex items-center gap-2">
-                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center text-[10px] font-bold flex-shrink-0">✓</span>
+                    <li class="flex items-center gap-2.5">
+                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center flex-shrink-0">
+                        <svg class="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                      </span>
                       <span>Accès aux fonctionnalités importantes sans connexion</span>
                     </li>
                   </ul>
@@ -341,28 +349,40 @@ import { CommonModule } from '@angular/common';
                   </div>
 
                   <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700">
-                    <li class="flex items-center gap-2">
-                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center text-[10px] font-bold flex-shrink-0">✓</span>
+                    <li class="flex items-center gap-2.5">
+                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center flex-shrink-0">
+                        <svg class="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                      </span>
                       <span>Clonage / personnalisation de voix</span>
                     </li>
-                    <li class="flex items-center gap-2">
-                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center text-[10px] font-bold flex-shrink-0">✓</span>
+                    <li class="flex items-center gap-2.5">
+                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center flex-shrink-0">
+                        <svg class="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                      </span>
                       <span>Avatar de l’enseignant</span>
                     </li>
-                    <li class="flex items-center gap-2">
-                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center text-[10px] font-bold flex-shrink-0">✓</span>
+                    <li class="flex items-center gap-2.5">
+                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center flex-shrink-0">
+                        <svg class="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                      </span>
                       <span>Avatar du parent</span>
                     </li>
-                    <li class="flex items-center gap-2">
-                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center text-[10px] font-bold flex-shrink-0">✓</span>
+                    <li class="flex items-center gap-2.5">
+                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center flex-shrink-0">
+                        <svg class="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                      </span>
                       <span>Affichage de l’avatar sur l’écran</span>
                     </li>
-                    <li class="flex items-center gap-2">
-                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center text-[10px] font-bold flex-shrink-0">✓</span>
+                    <li class="flex items-center gap-2.5">
+                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center flex-shrink-0">
+                        <svg class="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                      </span>
                       <span>Interaction vocale personnalisée</span>
                     </li>
-                    <li class="flex items-center gap-2">
-                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center text-[10px] font-bold flex-shrink-0">✓</span>
+                    <li class="flex items-center gap-2.5">
+                      <span class="w-4 h-4 rounded-full bg-primary/15 text-primary flex items-center justify-center flex-shrink-0">
+                        <svg class="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                      </span>
                       <span>Suivi à distance et recommandation</span>
                     </li>
                   </ul>

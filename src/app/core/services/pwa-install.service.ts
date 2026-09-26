@@ -1,4 +1,5 @@
 import { Injectable, signal } from '@angular/core';
+import { CookieConsentService } from './cookie-consent.service';
 
 const DISMISSED_KEY = 'alternia_pwa_dismissed';
 
@@ -9,6 +10,8 @@ export class PwaInstallService {
   readonly isIos = signal<boolean>(false);
 
   private deferredPrompt: BeforeInstallPromptEvent | null = null;
+
+  constructor(private cookieService: CookieConsentService) {}
 
   initialize(): void {
     if (typeof window === 'undefined') return;
@@ -29,18 +32,18 @@ export class PwaInstallService {
       this.deferredPrompt = e as BeforeInstallPromptEvent;
       this.canInstall.set(true);
 
-      // Invitation élégante après 6 secondes d'arrivée sur le site
+      // Invitation élégante après 6 secondes d'arrivée sur le site (uniquement si cookies traités)
       setTimeout(() => {
-        if (this.canInstall() && !this.isDismissed()) {
+        if (this.canInstall() && !this.isDismissed() && this.cookieService.status() !== 'pending') {
           this.showBanner.set(true);
         }
       }, 6000);
     });
 
-    // Fallback pour iOS non installé : affichage après 8 secondes
+    // Fallback pour iOS non installé : affichage après 8 secondes si cookies traités
     if (this.isIos()) {
       setTimeout(() => {
-        if (!this.isDismissed()) {
+        if (!this.isDismissed() && this.cookieService.status() !== 'pending') {
           this.showBanner.set(true);
         }
       }, 8000);
