@@ -6,6 +6,7 @@ interface Partner {
   badge: string;
   color: string;
   logo?: string;
+  colorClasses?: string;
 }
 
 @Component({
@@ -19,7 +20,7 @@ interface Partner {
       <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 mb-6 sm:mb-8 text-center">
         <div class="inline-block relative">
           <h2 class="font-heading text-xl sm:text-2xl md:text-3xl text-primary font-bold tracking-tight leading-snug">
-            Ils nous font confiance
+            Ils sont avec nous
           </h2>
           
           <!-- Trait de soulignement artistique calligraphique / brush stroke -->
@@ -48,7 +49,7 @@ interface Partner {
           @for (partner of partnersDoubled; track $index) {
             <div class="flex items-center gap-3.5 px-5 py-3 rounded-2xl bg-white border border-slate-200 shadow-sm flex-shrink-0 hover:border-primary/40 hover:shadow-md transition-all">
               
-              <!-- Logo Image Officiel ou Badge stylisé -->
+              <!-- Logo Image Officiel ou Icône SVG stylisée aux couleurs distinctes -->
               @if (partner.logo) {
                 <div class="w-10 h-10 rounded-xl overflow-hidden bg-slate-50 border border-slate-100 flex items-center justify-center p-1 flex-shrink-0 shadow-xs">
                   <img
@@ -60,14 +61,14 @@ interface Partner {
                 </div>
               } @else {
                 <div
-                  class="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-xs shadow-sm flex-shrink-0"
-                  [ngClass]="{
-                    'bg-primary/10 text-primary': partner.color === 'primary',
-                    'bg-secondary/15 text-secondary': partner.color === 'secondary',
-                    'bg-accent/15 text-accent': partner.color === 'accent'
-                  }"
+                  class="w-10 h-10 rounded-xl flex items-center justify-center shadow-xs flex-shrink-0"
+                  [ngClass]="partner.colorClasses"
                 >
-                  {{ partner.badge }}
+                  <!-- Une seule et unique icône académique élégante, déclinée en différentes couleurs -->
+                  <svg class="w-5 h-5 fill-none stroke-current stroke-2" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                  </svg>
                 </div>
               }
 
@@ -84,39 +85,45 @@ interface Partner {
   `
 })
 export class PartnersSectionComponent {
-  readonly partners: Partner[] = [
+  readonly partners: (Partner & { colorClasses: string })[] = [
     {
       name: 'Orange Digital Center',
       badge: 'ODC',
       color: 'accent',
+      colorClasses: 'bg-accent/15 text-accent',
       logo: 'assets/images/Partenaires/ODC.jpg'
     },
     {
       name: 'Lycée Rosé Abantara',
       badge: 'LRA',
       color: 'secondary',
+      colorClasses: 'bg-secondary/15 text-secondary',
       logo: 'assets/images/Partenaires/Rosey Abantara.jpg'
     },
     {
       name: 'Complexe scolaire Adiara',
       badge: 'CSA',
       color: 'primary',
+      colorClasses: 'bg-primary/10 text-primary',
       logo: 'assets/images/Partenaires/CSM Adiara.png'
     },
     {
       name: 'Lycée Relais des Mamans',
       badge: 'LRM',
-      color: 'secondary'
+      color: 'emerald',
+      colorClasses: 'bg-emerald-50 text-emerald-600 border border-emerald-200/60'
     },
     {
       name: 'Lycée Kanitao',
       badge: 'LK',
-      color: 'accent'
+      color: 'amber',
+      colorClasses: 'bg-amber-50 text-amber-600 border border-amber-200/60'
     },
     {
       name: 'Lycée BMS',
       badge: 'BMS',
-      color: 'primary'
+      color: 'indigo',
+      colorClasses: 'bg-indigo-50 text-indigo-600 border border-indigo-200/60'
     }
   ];
 

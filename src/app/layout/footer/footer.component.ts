@@ -8,38 +8,54 @@ import { LegalDocType } from '../../shared/components/legal-modal/legal-modal.co
   standalone: true,
   imports: [CommonModule],
   template: `
-    <!-- Zone Entre Contact et Footer avec Filigrane ALTERNIA en Sinusoïde Continue et Ininterrompue 24/7 -->
-    <div class="w-full relative overflow-hidden pt-1 pb-1 pointer-events-none select-none flex justify-center items-center" aria-hidden="true">
-      
-      <svg class="w-full h-14 sm:h-18 md:h-22 overflow-visible" viewBox="0 0 1600 140" fill="none" preserveAspectRatio="none">
-        <defs>
-          <!-- Tracé étendu de la courbe sinusoïdale continue périodique -->
-          <path id="sineWaveCurve" d="M -2400,70 C -2150,-15 -1850,155 -1600,70 C -1350,-15 -1050,155 -800,70 C -550,-15 -250,155 0,70 C 250,-15 550,155 800,70 C 1050,-15 1350,155 1600,70 C 1850,-15 2150,155 2400,70 C 2650,-15 2950,155 3200,70 C 3450,-15 3750,155 4000,70 C 4250,-15 4550,155 4800,70" />
-        </defs>
-
-        <!-- Texte ALTERNIA ondulant en boucle parfaite sans aucune pause ni vide -->
-        <text class="font-heading font-black tracking-[0.25em] uppercase text-3xl sm:text-5xl fill-primary/30">
-          <textPath href="#sineWaveCurve" startOffset="0%">
-            <animate
-              attributeName="startOffset"
-              from="-25%"
-              to="0%"
-              dur="18s"
-              repeatCount="indefinite"
-              calcMode="linear"
-            />
-            ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA
-          </textPath>
-        </text>
-
-      </svg>
+    <!-- ========================================================
+         SÉPARATION DISTINCTE AVANT LE FOOTER
+         ======================================================== -->
+    <div class="w-full border-t border-slate-200/90 bg-[#F8F9FB] pt-6 pb-2" aria-hidden="true">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 flex items-center justify-center">
+        <div class="flex items-center gap-3">
+          <div class="h-px w-20 sm:w-36 bg-gradient-to-r from-transparent to-slate-300"></div>
+          <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+          <div class="w-2.5 h-2.5 rounded-full bg-primary/80"></div>
+          <div class="w-1.5 h-1.5 rounded-full bg-accent"></div>
+          <div class="h-px w-20 sm:w-36 bg-gradient-to-l from-transparent to-slate-300"></div>
+        </div>
+      </div>
     </div>
 
-    <!-- Section Footer en Card Compact aux Bords Arrondis -->
-    <footer class="pt-0 pb-5 px-3 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-10" role="contentinfo">
-      
-      <!-- Conteneur Card avec Hauteur Réduite et Bords Arrondis -->
-      <div class="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-[0_4px_20px_rgba(0,0,0,0.03)] px-5 sm:px-8 py-4 sm:py-5">
+    <!-- Zone Globale Footer avec Fond Harmonisé & Filigrane ALTERNIA en Sinusoïde Continue -->
+    <div class="w-full bg-[#F8F9FB]">
+      <div class="w-full relative overflow-hidden pt-1 pb-1 pointer-events-none select-none flex justify-center items-center" aria-hidden="true">
+        
+        <svg class="w-full h-14 sm:h-18 md:h-22 overflow-visible" viewBox="0 0 1600 140" fill="none" preserveAspectRatio="none">
+          <defs>
+            <!-- Tracé étendu de la courbe sinusoïdale continue périodique -->
+            <path id="sineWaveCurve" d="M -2400,70 C -2150,-15 -1850,155 -1600,70 C -1350,-15 -1050,155 -800,70 C -550,-15 -250,155 0,70 C 250,-15 550,155 800,70 C 1050,-15 1350,155 1600,70 C 1850,-15 2150,155 2400,70 C 2650,-15 2950,155 3200,70 C 3450,-15 3750,155 4000,70 C 4250,-15 4550,155 4800,70" />
+          </defs>
+
+          <!-- Texte ALTERNIA ondulant en boucle parfaite sans aucune pause ni vide -->
+          <text class="font-heading font-black tracking-[0.25em] uppercase text-3xl sm:text-5xl fill-primary/30">
+            <textPath href="#sineWaveCurve" startOffset="0%">
+              <animate
+                attributeName="startOffset"
+                from="-25%"
+                to="0%"
+                dur="18s"
+                repeatCount="indefinite"
+                calcMode="linear"
+              />
+              ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA ✦ ALTERNIA
+            </textPath>
+          </text>
+
+        </svg>
+      </div>
+
+      <!-- Section Footer en Card Compact aux Bords Arrondis -->
+      <footer class="pt-0 pb-6 px-3 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-10" role="contentinfo">
+        
+        <!-- Conteneur Card avec Hauteur Réduite et Bords Arrondis -->
+        <div class="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-[0_4px_20px_rgba(0,0,0,0.03)] px-5 sm:px-8 py-4 sm:py-5">
         
         <!-- Grille Principale Compacte et Épurée -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-6 pb-3">
@@ -225,6 +241,7 @@ import { LegalDocType } from '../../shared/components/legal-modal/legal-modal.co
       </div>
 
     </footer>
+    </div>
   `
 })
 export class FooterComponent {

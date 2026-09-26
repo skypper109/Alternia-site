@@ -38,11 +38,11 @@ interface TeamMember {
         @for (member of team; track member.id; let i = $index) {
           <div
             #memberCard
-            class="p-4 sm:p-5 rounded-3xl bg-white border border-slate-200 shadow-sm hover:border-primary/40 hover:shadow-md transition-all duration-[1200ms] ease-out flex flex-col justify-between items-center text-center group"
-            [style.transitionDelay]="(i * 180) + 'ms'"
+            class="p-4 sm:p-5 rounded-3xl bg-white border border-slate-200 shadow-sm hover:border-primary/40 hover:shadow-md transition-all duration-[1500ms] ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col justify-between items-center text-center group"
+            [style.transitionDelay]="((3 - i) * 320) + 'ms'"
             [ngClass]="{
-              'opacity-0 -translate-x-12 scale-95': !isMemberInView(i),
-              'opacity-100 translate-x-0 scale-100': isMemberInView(i)
+              'opacity-0 translate-y-16 scale-90 blur-[2px]': !isMemberInView(i),
+              'opacity-100 translate-y-0 scale-100 blur-0': isMemberInView(i)
             }"
           >
             
@@ -170,10 +170,10 @@ export class TeamSectionComponent implements AfterViewInit, OnDestroy {
           const cardIndex = this.memberCardRefs.toArray().findIndex(
             (ref) => ref.nativeElement === entry.target
           );
-          if (cardIndex !== -1) {
+          if (cardIndex !== -1 && entry.isIntersecting) {
             this.membersInView.update((states) => {
               const next = [...states];
-              next[cardIndex] = entry.isIntersecting;
+              next[cardIndex] = true;
               return next;
             });
           }

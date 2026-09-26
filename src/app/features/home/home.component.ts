@@ -68,19 +68,17 @@ import { FloatingWhatsappComponent } from '../../shared/components/floating-what
     <!-- 10. AVATAR — LES 3 AVATARS PERSONNALISÉS -->
     <app-avatar-section />
 
-    <!-- 11. FAQ ACCORDÉON INTERACTIVE -->
-    <app-faq-section />
-
-    <!-- 12. ÉQUIPE & FORMULAIRE DE CONTACT -->
-    <section id="contact" class="py-6 sm:py-8 lg:py-10 bg-[#F8F9FB] relative border-t border-slate-200/70">
+    <!-- 8. ÉQUIPE -->
+    <section id="equipe" class="py-10 sm:py-14 lg:py-16 bg-[#F8F9FB] relative border-t border-slate-200/70">
       <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-        
-        <!-- ÉQUIPE -->
         <app-team-section />
+      </div>
+    </section>
 
-        <!-- FORMULAIRE DE CONTACT -->
+    <!-- 9. CONTACT & DEMANDE DE DÉMO (Cible directe du bouton Contact dans la navbar) -->
+    <section id="contact" class="py-12 sm:py-16 lg:py-20 bg-white relative border-t border-slate-200/70 scroll-mt-20">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         <app-contact-section />
-
       </div>
     </section>
 
